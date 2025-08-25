@@ -501,80 +501,80 @@
     </footer>
 
     <script src="script.js"></script>
-	<div id="popup-box">
+
+<div id="popup-box">
   <img src="../assets/Me.png" alt="Assistant" class="popup-image">
-  <div class="speech-bubble" id="popup-text">👋 My Experiences are Mostly Based on Improving UI/UX!</div>
+  <div class="speech-bubble" id="popup-text">
+    👋 My Experiences are Mostly Based on Improving UI/UX!
+  </div>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const popupBox = document.getElementById("popup-box");
   const popupText = document.getElementById("popup-text");
 
-  // Function to show a dialogue
   function showDialogue(text) {
-    popupBox.classList.remove("active"); // hide current
+    popupBox.classList.remove("active");
     setTimeout(() => {
       popupText.textContent = text;
-      popupBox.classList.add("active"); // show new
-    }, 400);
+      popupBox.classList.add("active");
+    }, 300);
   }
 
-  // 1. Show welcome after load
+  // Show welcome after load
   setTimeout(() => {
     showDialogue("👋 My Experiences are Mostly Based on Improving UI/UX!");
   }, 1000);
 
+  // Detect if mobile
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-  document.querySelectorAll("#ecommerce-dashboard").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("👀 A E-commerce Design should be all about REliability and Accountability!");
-    });
-  });
-  
-  // 3. Skill popup (hover over skill card)
-  document.querySelectorAll("#mobile-banking").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("💡 A Design which indicates Safety and Accountability");
-    });
-  });
-  document.querySelectorAll("#saas-platform").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("⚡ Good Designs Helps Access Everything Easily and Fastly.");
-    });
-  });
+  // Skill messages
+  const sections = [
+    { id: "#ecommerce-dashboard", text: "👀 A E-commerce Design should be all about Reliability and Accountability!" },
+    { id: "#mobile-banking", text: "💡 A Design which indicates Safety and Accountability" },
+    { id: "#saas-platform", text: "🚀 Good Designs Helps Access Everything Easily and Fastly." },
+    { id: "#fashion-marketplace", text: "🌼 Refreshing Designs with Exposures" },
+    { id: "#learning-management", text: "💡 Creative Designs for Creative Minds." },
+    { id: "#project-management", text: "⚙ Do you want to handle your Projects?" }
+  ];
 
- document.querySelectorAll("#saas-platform").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("🚀 Good Designs Helps Access Everything Easily and Fastly.");
-    });
-  });
-  
-   document.querySelectorAll("#fashion-marketplace").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("🌼 Refreshing Designs with Exposures");
-    });
-  });
-  
-   document.querySelectorAll("#learning-management").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("💡 Creative Designs for Creative Minds.");
-    });
-  });
-     document.querySelectorAll("#project-management").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("⚙ Do you want to handle your Projects?");
-    });
-  });
-  // 5. CTA section (bottom of page)
-  window.addEventListener("scroll", () => {
-    const cta = document.querySelector(".cta-section");
-    if (cta && cta.getBoundingClientRect().top < window.innerHeight * 0.7) {
-      showDialogue("💌 Let’s create something amazing together!");
-    }
-  });
+  if (isMobile) {
+    // 📱 On mobile → trigger when section scrolls into view
+    window.addEventListener("scroll", () => {
+      sections.forEach(({ id, text }) => {
+        const el = document.querySelector(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.6 && rect.bottom > 0) {
+            showDialogue(text);
+          }
+        }
+      });
 
-  // 6. Exit intent
+      // CTA section at bottom
+      const cta = document.querySelector(".cta-section");
+      if (cta && cta.getBoundingClientRect().top < window.innerHeight * 0.7) {
+        showDialogue("💌 Let’s create something amazing together!");
+      }
+    });
+  } else {
+    // 🖥 On desktop → keep hover
+    sections.forEach(({ id, text }) => {
+      document.querySelectorAll(id).forEach(el => {
+        el.addEventListener("mouseenter", () => showDialogue(text));
+      });
+    });
 
+    // CTA section on scroll
+    window.addEventListener("scroll", () => {
+      const cta = document.querySelector(".cta-section");
+      if (cta && cta.getBoundingClientRect().top < window.innerHeight * 0.7) {
+        showDialogue("💌 Let’s create something amazing together!");
+      }
+    });
+  }
 });
 </script>
 </body>
