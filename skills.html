@@ -296,18 +296,18 @@
   <img src="assets/Me.png" alt="Assistant" class="popup-image">
   <div class="speech-bubble" id="popup-text">👋 My Secret Skill is that Everyone Hires Me!</div>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const popupBox = document.getElementById("popup-box");
   const popupText = document.getElementById("popup-text");
 
-  // Function to show a dialogue
   function showDialogue(text) {
-    popupBox.classList.remove("active"); // hide current
+    popupBox.classList.remove("active");
     setTimeout(() => {
       popupText.textContent = text;
-      popupBox.classList.add("active"); // show new
-    }, 400);
+      popupBox.classList.add("active");
+    }, 300);
   }
 
   // 1. Show welcome after load
@@ -315,31 +315,45 @@ document.addEventListener("DOMContentLoaded", () => {
     showDialogue("👋 My Secret Skill is that Everyone Hires Me!");
   }, 1000);
 
+  // Detect if mobile
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-  document.querySelectorAll(".tools-section").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("👀 Let me Know Which Tool is your favourite!");
+  // Section dialogues
+  const sections = [
+    { selector: ".tools-section", text: "👀 Let me Know Which Tool is your favourite!" },
+    { selector: ".process-section", text: "💡 I Like to follow a detailed Process to Improve Designs." },
+    { selector: ".cta-section", text: "💌 Let’s create something amazing together!" }
+  ];
+
+  if (isMobile) {
+    // 📱 On mobile → trigger when section scrolls into view
+    window.addEventListener("scroll", () => {
+      sections.forEach(({ selector, text }) => {
+        const el = document.querySelector(selector);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.6 && rect.bottom > 0) {
+            showDialogue(text);
+          }
+        }
+      });
     });
-  });
-
-  // 3. Skill popup (hover over skill card)
-  document.querySelectorAll(".process-section").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("💡 I Like to follow a detailed Process to Improve Designs.");
+  } else {
+    // 🖥 On desktop → keep hover for interactive sections
+    sections.forEach(({ selector, text }) => {
+      document.querySelectorAll(selector).forEach(el => {
+        el.addEventListener("mouseenter", () => showDialogue(text));
+      });
     });
-  });
 
-
-  // 5. CTA section (bottom of page)
-  window.addEventListener("scroll", () => {
-    const cta = document.querySelector(".cta-section");
-    if (cta && cta.getBoundingClientRect().top < window.innerHeight * 0.7) {
-      showDialogue("💌 Let’s create something amazing together!");
-    }
-  });
-
-  // 6. Exit intent
-
+    // CTA still works on scroll for desktop
+    window.addEventListener("scroll", () => {
+      const cta = document.querySelector(".cta-section");
+      if (cta && cta.getBoundingClientRect().top < window.innerHeight * 0.7) {
+        showDialogue("💌 Let’s create something amazing together!");
+      }
+    });
+  }
 });
 </script>
 </body>
