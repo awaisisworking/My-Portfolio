@@ -203,20 +203,22 @@
 
 <div id="popup-box">
   <img src="assets/Me.png" alt="Assistant" class="popup-image">
-  <div class="speech-bubble" id="popup-text"> Let's Connect. Robert Kiyosaki: “The richest people in the world look for and build networks, everyone else looks for work.”  </div>
+  <div class="speech-bubble" id="popup-text">
+    Let's Connect. Robert Kiyosaki: “The richest people in the world look for and build networks, everyone else looks for work.”
+  </div>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const popupBox = document.getElementById("popup-box");
   const popupText = document.getElementById("popup-text");
 
-  // Function to show a dialogue
   function showDialogue(text) {
-    popupBox.classList.remove("active"); // hide current
+    popupBox.classList.remove("active");
     setTimeout(() => {
       popupText.textContent = text;
-      popupBox.classList.add("active"); // show new
-    }, 400);
+      popupBox.classList.add("active");
+    }, 300);
   }
 
   // 1. Show welcome after load
@@ -224,14 +226,37 @@ document.addEventListener("DOMContentLoaded", () => {
     showDialogue("Let's Connect. Robert Kiyosaki said: “The richest people in the world look for and build networks, everyone else looks for work.”");
   }, 1000);
 
-  // 2. Project popup (when projects section enters view)
-  document.querySelectorAll(".faq-section").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("👍 Whatsapp Me, for Urgent Response");
-    });
-  });
+  // Detect if mobile
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
+  // Sections and dialogues
+  const sections = [
+    { selector: ".faq-section", text: "👍 Whatsapp Me, for Urgent Response" }
+  ];
+
+  if (isMobile) {
+    // 📱 On mobile → trigger when section scrolls into view
+    window.addEventListener("scroll", () => {
+      sections.forEach(({ selector, text }) => {
+        const el = document.querySelector(selector);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.6 && rect.bottom > 0) {
+            showDialogue(text);
+          }
+        }
+      });
+    });
+  } else {
+    // 🖥 On desktop → hover
+    sections.forEach(({ selector, text }) => {
+      document.querySelectorAll(selector).forEach(el => {
+        el.addEventListener("mouseenter", () => showDialogue(text));
+      });
+    });
+  }
 });
 </script>
+
 </body>
 </html>
