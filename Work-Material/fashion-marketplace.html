@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Marketplace - Thomas Smith Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="fashion-marketplace.css">
+</head>
+<body>
+    <!-- Portfolio Navigation -->
+    <nav class="portfolio-nav">
+        <div class="portfolio-nav-content">
+            <a href="../index.html" class="portfolio-brand">← Back to Portfolio</a>
+            <a href="case-study-fashion.html" class="case-study-link">View Case Study</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="marketplace-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-info">
+                    <span>Free shipping on orders over $100</span>
+                    <span>24/7 Customer Support</span>
+                </div>
+                <div class="header-actions">
+                    <button class="language-btn">EN <i data-feather="chevron-down"></i></button>
+                    <a href="#" class="account-link">Sign In</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i data-feather="shopping-bag"></i>
+                        <span>StyleHub</span>
+                    </div>
+                    
+                    <div class="search-section">
+                        <div class="search-bar">
+                            <i data-feather="search"></i>
+                            <input type="text" placeholder="Search for products, brands, and more...">
+                            <button class="search-btn">Search</button>
+                        </div>
+                    </div>
+                    
+                    <div class="header-tools">
+                        <button class="wishlist-btn">
+                            <i data-feather="heart"></i>
+                            <span class="tool-label">Wishlist</span>
+                            <span class="item-count">3</span>
+                        </button>
+                        <button class="cart-btn">
+                            <i data-feather="shopping-cart"></i>
+                            <span class="tool-label">Cart</span>
+                            <span class="item-count">2</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <nav class="main-nav">
+                    <a href="#" class="nav-item active">New Arrivals</a>
+                    <a href="#" class="nav-item">Women</a>
+                    <a href="#" class="nav-item">Men</a>
+                    <a href="#" class="nav-item">Kids</a>
+                    <a href="#" class="nav-item">Accessories</a>
+                    <a href="#" class="nav-item">Sale</a>
+                    <a href="#" class="nav-item brands">Brands</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Spring Collection 2025</h1>
+                <p>Discover the latest trends and elevate your style with our curated fashion pieces.</p>
+                <button class="cta-button">Shop Now</button>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i data-feather="image"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <div class="image-placeholder">
+                            <i data-feather="user"></i>
+                        </div>
+                    </div>
+                    <h3>Women's Fashion</h3>
+                    <p>Explore the latest trends</p>
+                    <a href="#" class="category-link">Shop Women</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <div class="image-placeholder">
+                            <i data-feather="user"></i>
+                        </div>
+                    </div>
+                    <h3>Men's Fashion</h3>
+                    <p>Classic and contemporary styles</p>
+                    <a href="#" class="category-link">Shop Men</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <div class="image-placeholder">
+                            <i data-feather="watch"></i>
+                        </div>
+                    </div>
+                    <h3>Accessories</h3>
+                    <p>Complete your look</p>
+                    <a href="#" class="category-link">Shop Accessories</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <div class="image-placeholder">
+                            <i data-feather="tag"></i>
+                        </div>
+                    </div>
+                    <h3>Sale Items</h3>
+                    <p>Up to 70% off</p>
+                    <a href="#" class="category-link">Shop Sale</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <div class="filter-tabs">
+                    <button class="filter-tab active">All</button>
+                    <button class="filter-tab">New</button>
+                    <button class="filter-tab">Trending</button>
+                    <button class="filter-tab">Sale</button>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            <i data-feather="shirt"></i>
+                        </div>
+                        <div class="product-badges">
+                            <span class="badge new">New</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i data-feather="heart"></i>
+                            </button>
+                            <button class="action-btn quick-view">
+                                <i data-feather="eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Cotton T-Shirt</h3>
+                        <p class="brand">StyleBrand</p>
+                        <div class="rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(124)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$29.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            <i data-feather="package"></i>
+                        </div>
+                        <div class="product-badges">
+                            <span class="badge sale">-20%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i data-feather="heart"></i>
+                            </button>
+                            <button class="action-btn quick-view">
+                                <i data-feather="eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Denim Jacket</h3>
+                        <p class="brand">TrendCo</p>
+                        <div class="rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-count">(89)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$79.99</span>
+                            <span class="original-price">$99.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            <i data-feather="shopping-bag"></i>
+                        </div>
+                        <div class="product-badges">
+                            <span class="badge trending">Trending</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist active">
+                                <i data-feather="heart"></i>
+                            </button>
+                            <button class="action-btn quick-view">
+                                <i data-feather="eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Leather Handbag</h3>
+                        <p class="brand">LuxBags</p>
+                        <div class="rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(203)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$149.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            <i data-feather="watch"></i>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i data-feather="heart"></i>
+                            </button>
+                            <button class="action-btn quick-view">
+                                <i data-feather="eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Watch</h3>
+                        <p class="brand">TechStyle</p>
+                        <div class="rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-count">(156)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$199.99</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay in Style</h2>
+                <p>Subscribe to our newsletter and be the first to know about new arrivals, exclusive offers, and fashion tips.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="marketplace-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>About StyleHub</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i data-feather="instagram"></i></a>
+                        <a href="#"><i data-feather="facebook"></i></a>
+                        <a href="#"><i data-feather="twitter"></i></a>
+                        <a href="#"><i data-feather="youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <div class="payment-icons">
+                        <span class="payment-icon">VISA</span>
+                        <span class="payment-icon">MC</span>
+                        <span class="payment-icon">AMEX</span>
+                        <span class="payment-icon">PAYPAL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+		// for my portfolio.
+		alert("Admin Only allows Demo of Page. Click Okay to continue.");
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Filter tabs
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Wishlist toggle
+        document.querySelectorAll('.action-btn.wishlist').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+        
+        // Add to cart animations
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const originalText = this.textContent;
+                this.textContent = 'Added!';
+                this.style.backgroundColor = '#4caf50';
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.style.backgroundColor = '';
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>

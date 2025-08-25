@@ -1,0 +1,764 @@
+/* Mobile Banking App CSS */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #4da6ff;
+    --background-color: #ffffff;
+    --surface-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #e1e5e9;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --error-color: #f44336;
+    --info-color: #2196f3;
+    --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --border-radius-lg: 20px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Portfolio Navigation */
+.portfolio-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    padding: 0.75rem 0;
+}
+
+.portfolio-nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-brand {
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.portfolio-brand:hover {
+    color: var(--primary-color);
+}
+
+.case-study-link {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.case-study-link:hover {
+    background-color: #0052a3;
+    transform: translateY(-1px);
+}
+
+/* Phone Container */
+.phone-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+}
+
+.phone-frame {
+    width: 375px;
+    height: 812px;
+    background-color: var(--background-color);
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Status Bar */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem 0.5rem;
+    background-color: var(--background-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.status-left .time {
+    color: var(--text-primary);
+}
+
+.status-right {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.status-icon {
+    width: 16px;
+    height: 16px;
+    stroke: var(--text-primary);
+}
+
+.battery {
+    width: 24px;
+    height: 12px;
+    border: 1px solid var(--text-primary);
+    border-radius: 2px;
+    position: relative;
+}
+
+.battery::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 3px;
+    width: 2px;
+    height: 6px;
+    background-color: var(--text-primary);
+    border-radius: 0 1px 1px 0;
+}
+
+.battery-fill {
+    width: 80%;
+    height: 100%;
+    background-color: var(--success-color);
+    border-radius: 1px;
+}
+
+/* App Header */
+.app-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 1.5rem 2rem;
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+    margin: 0 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-greeting h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.user-greeting p {
+    opacity: 0.9;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notification-btn {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.notification-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.notification-btn i {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--error-color);
+    border-radius: 50%;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* App Content */
+.app-content {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+/* Balance Section */
+.balance-section {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.visibility-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.visibility-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.visibility-toggle i {
+    width: 16px;
+    height: 16px;
+    stroke: white;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.currency {
+    font-size: 1.5rem;
+    margin-right: 0.25rem;
+}
+
+.balance-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+/* Quick Actions */
+.quick-actions {
+    margin-bottom: 2rem;
+}
+
+.quick-actions h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.action-btn:hover {
+    background-color: var(--surface-color);
+}
+
+.action-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+}
+
+.action-icon.send {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.action-icon.receive {
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+}
+
+.action-icon.pay {
+    background: linear-gradient(135deg, #ff9800, #ffc107);
+}
+
+.action-icon.invest {
+    background: linear-gradient(135deg, #e91e63, #f06292);
+}
+
+.action-icon i {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+}
+
+.action-btn span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Transactions Section */
+.transactions-section {
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.see-all-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.transactions-list {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-item:hover {
+    background-color: var(--surface-color);
+}
+
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.transaction-icon.transfer {
+    background-color: #fff3e0;
+}
+
+.transaction-icon.transfer i {
+    stroke: var(--warning-color);
+}
+
+.transaction-icon.deposit {
+    background-color: #e8f5e8;
+}
+
+.transaction-icon.deposit i {
+    stroke: var(--success-color);
+}
+
+.transaction-icon.purchase {
+    background-color: #e3f2fd;
+}
+
+.transaction-icon.purchase i {
+    stroke: var(--info-color);
+}
+
+.transaction-icon.subscription {
+    background-color: #f3e5f5;
+}
+
+.transaction-icon.subscription i {
+    stroke: #9c27b0;
+}
+
+.transaction-icon.cashback {
+    background-color: #e8f5e8;
+}
+
+.transaction-icon.cashback i {
+    stroke: var(--success-color);
+}
+
+.transaction-details {
+    flex: 1;
+}
+
+.transaction-details h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.transaction-details p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.transaction-amount {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.transaction-amount.positive {
+    color: var(--success-color);
+}
+
+.transaction-amount.negative {
+    color: var(--text-primary);
+}
+
+/* Cards Section */
+.cards-section {
+    margin-bottom: 2rem;
+}
+
+.add-card-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-card-btn:hover {
+    background-color: var(--surface-color);
+    border-color: var(--primary-color);
+}
+
+.add-card-btn i {
+    width: 16px;
+    height: 16px;
+    stroke: var(--primary-color);
+}
+
+.cards-slider {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.card-item {
+    flex-shrink: 0;
+    width: 280px;
+    height: 160px;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-medium);
+}
+
+.card-item.primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.card-item.secondary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-type {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.card-logo {
+    font-size: 0.875rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.card-number {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 1rem 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+/* Insights Section */
+.insights-section {
+    margin-bottom: 2rem;
+}
+
+.insights-section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.insights-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.insight-card {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.insight-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.insight-icon i {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+}
+
+.insight-content h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.insight-content p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.insight-change {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+}
+
+.insight-change.positive {
+    background-color: #e8f5e8;
+    color: var(--success-color);
+}
+
+.insight-change.neutral {
+    background-color: #e3f2fd;
+    color: var(--info-color);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--border-color);
+    padding: 0.75rem 0 1rem;
+}
+
+.bottom-nav .nav-item {
+    flex: 1;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0.5rem;
+}
+
+.bottom-nav .nav-item i {
+    width: 20px;
+    height: 20px;
+    stroke: var(--text-muted);
+}
+
+.bottom-nav .nav-item span {
+    font-size: 0.625rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.bottom-nav .nav-item.active i {
+    stroke: var(--primary-color);
+}
+
+.bottom-nav .nav-item.active span {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+    
+    .phone-frame {
+        width: 100%;
+        max-width: 375px;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .portfolio-nav-content {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-container {
+        margin-top: 60px;
+    }
+    
+    .cards-slider {
+        gap: 0.75rem;
+    }
+    
+    .card-item {
+        width: 250px;
+    }
+}

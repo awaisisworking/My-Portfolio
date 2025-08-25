@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Admin Dashboard - Thomas Smith Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="ecommerce-dashboard.css">
+</head>
+<body>
+    <!-- Portfolio Navigation -->
+    <nav class="portfolio-nav">
+        <div class="portfolio-nav-content">
+            <a href="../index.html" class="portfolio-brand">← Back to Portfolio</a>
+            <a href="case-study-ecommerce.html" class="case-study-link">View Case Study</a>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-feather="shopping-bag"></i>
+                    <span>ShopAdmin</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <i data-feather="home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i data-feather="package"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i data-feather="shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i data-feather="users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i data-feather="bar-chart-2"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i data-feather="settings"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome back, Admin</p>
+                </div>
+                <div class="header-right">
+                    <button class="notification-btn">
+                        <i data-feather="bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <i data-feather="user"></i>
+                        </div>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon revenue">
+                            <i data-feather="dollar-sign"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>$24,567</h3>
+                            <p>Total Revenue</p>
+                            <span class="stat-change positive">+12.5%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon orders">
+                            <i data-feather="shopping-cart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>1,234</h3>
+                            <p>Total Orders</p>
+                            <span class="stat-change positive">+8.2%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon customers">
+                            <i data-feather="users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>856</h3>
+                            <p>New Customers</p>
+                            <span class="stat-change positive">+15.3%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon products">
+                            <i data-feather="package"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>2,468</h3>
+                            <p>Total Products</p>
+                            <span class="stat-change negative">-2.1%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Revenue Analytics</h3>
+                            <select class="time-filter">
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 3 months</option>
+                            </select>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="mock-chart">
+                                <div class="chart-bars">
+                                    <div class="bar" style="height: 60%;"></div>
+                                    <div class="bar" style="height: 80%;"></div>
+                                    <div class="bar" style="height: 45%;"></div>
+                                    <div class="bar" style="height: 90%;"></div>
+                                    <div class="bar" style="height: 70%;"></div>
+                                    <div class="bar" style="height: 95%;"></div>
+                                    <div class="bar" style="height: 55%;"></div>
+                                </div>
+                                <div class="chart-labels">
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+                                    <span>Sun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Top Categories</h3>
+                        </div>
+                        <div class="categories-list">
+                            <div class="category-item">
+                                <span class="category-name">Electronics</span>
+                                <div class="category-bar">
+                                    <div class="bar-fill" style="width: 85%;"></div>
+                                </div>
+                                <span class="category-value">85%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-name">Clothing</span>
+                                <div class="category-bar">
+                                    <div class="bar-fill" style="width: 72%;"></div>
+                                </div>
+                                <span class="category-value">72%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-name">Home & Garden</span>
+                                <div class="category-bar">
+                                    <div class="bar-fill" style="width: 58%;"></div>
+                                </div>
+                                <span class="category-value">58%</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-name">Sports</span>
+                                <div class="category-bar">
+                                    <div class="bar-fill" style="width: 41%;"></div>
+                                </div>
+                                <span class="category-value">41%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Orders Table -->
+            <section class="orders-section">
+                <div class="section-header">
+                    <h3>Recent Orders</h3>
+                    <a href="#" class="view-all-link">View All</a>
+                </div>
+                <div class="table-container">
+                    <table class="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Product</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-001</td>
+                                <td>
+                                    <div class="customer-info">
+                                        <div class="customer-avatar">SK</div>
+                                        <span>Shahzaib Khan</span>
+                                    </div>
+                                </td>
+                                <td>Wireless Headphones</td>
+                                <td>Dec 15, 2024</td>
+                                <td>$299.99</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <i data-feather="eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-002</td>
+                                <td>
+                                    <div class="customer-info">
+                                        <div class="customer-avatar">SK</div>
+                                        <span>Salman Khan</span>
+                                    </div>
+                                </td>
+                                <td>Smart Watch</td>
+                                <td>Dec 14, 2024</td>
+                                <td>$399.99</td>
+                                <td><span class="status processing">Processing</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <i data-feather="eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-003</td>
+                                <td>
+                                    <div class="customer-info">
+                                        <div class="customer-avatar">AA</div>
+                                        <span>Awais Ali</span>
+                                    </div>
+                                </td>
+                                <td>Gaming Keyboard</td>
+                                <td>Dec 13, 2024</td>
+                                <td>$149.99</td>
+                                <td><span class="status shipped">Shipped</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <i data-feather="eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-004</td>
+                                <td>
+                                    <div class="customer-info">
+                                        <div class="customer-avatar">SA</div>
+                                        <span>Sara Amin</span>
+                                    </div>
+                                </td>
+                                <td>Laptop Stand</td>
+                                <td>Dec 12, 2024</td>
+                                <td>$79.99</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>
+                                    <button class="action-btn">
+                                        <i data-feather="eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h3>Quick Actions</h3>
+                <div class="actions-grid">
+                    <button class="action-card">
+                        <i data-feather="plus"></i>
+                        <span>Add Product</span>
+                    </button>
+                    <button class="action-card">
+                        <i data-feather="users"></i>
+                        <span>Manage Users</span>
+                    </button>
+                    <button class="action-card">
+                        <i data-feather="tag"></i>
+                        <span>Create Coupon</span>
+                    </button>
+                    <button class="action-card">
+                        <i data-feather="mail"></i>
+                        <span>Send Newsletter</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // for my portfolio.
+		alert("Admin Only allows Demo of Page. Click Okay to continue.");
+		// Initialize Feather icons
+        feather.replace();
+        
+        // Simple interactions
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+                this.parentElement.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

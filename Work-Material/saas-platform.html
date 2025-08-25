@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Platform Dashboard - Thomas Smith Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="saas-platform.css">
+</head>
+<body>
+    <!-- Portfolio Navigation -->
+    <nav class="portfolio-nav">
+        <div class="portfolio-nav-content">
+            <a href="../index.html" class="portfolio-brand">← Back to Portfolio</a>
+            <a href="case-study-saas.html" class="case-study-link">View Case Study</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="saas-container">
+        <!-- Header -->
+        <header class="saas-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <i data-feather="zap"></i>
+                        <span>CloudFlow</span>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="#" class="nav-link active">Dashboard</a>
+                        <a href="#" class="nav-link">Analytics</a>
+                        <a href="#" class="nav-link">Projects</a>
+                        <a href="#" class="nav-link">Team</a>
+                        <a href="#" class="nav-link">Settings</a>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button class="search-btn">
+                        <i data-feather="search"></i>
+                    </button>
+                    <button class="notification-btn">
+                        <i data-feather="bell"></i>
+                        <span class="notification-badge">2</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <div class="user-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%23ffffff'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23667eea'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-family='Inter' font-weight='600' font-size='12'%3EAK%3C/text%3E%3C/svg%3E" alt="User">
+                        </div>
+                        <span class="user-name">Ali Khan</span>
+                        <i data-feather="chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-content">
+                    <h1>Welcome back, Ali! 👋</h1>
+                    <p>Here's what's happening with your projects today.</p>
+                </div>
+                <div class="welcome-actions">
+                    <button class="btn-primary">
+                        <i data-feather="plus"></i>
+                        New Project
+                    </button>
+                    <button class="btn-secondary">
+                        <i data-feather="upload"></i>
+                        Import Data
+                    </button>
+                </div>
+            </section>
+
+            <!-- Stats Grid -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3>Total Users</h3>
+                            <div class="stat-icon users">
+                                <i data-feather="users"></i>
+                            </div>
+                        </div>
+                        <div class="stat-value">24,567</div>
+                        <div class="stat-change positive">
+                            <i data-feather="trending-up"></i>
+                            <span>+12.5%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3>Revenue</h3>
+                            <div class="stat-icon revenue">
+                                <i data-feather="dollar-sign"></i>
+                            </div>
+                        </div>
+                        <div class="stat-value">$89,247</div>
+                        <div class="stat-change positive">
+                            <i data-feather="trending-up"></i>
+                            <span>+8.2%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3>Active Projects</h3>
+                            <div class="stat-icon projects">
+                                <i data-feather="folder"></i>
+                            </div>
+                        </div>
+                        <div class="stat-value">142</div>
+                        <div class="stat-change positive">
+                            <i data-feather="trending-up"></i>
+                            <span>+5.7%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3>Conversion Rate</h3>
+                            <div class="stat-icon conversion">
+                                <i data-feather="target"></i>
+                            </div>
+                        </div>
+                        <div class="stat-value">3.24%</div>
+                        <div class="stat-change negative">
+                            <i data-feather="trending-down"></i>
+                            <span>-2.1%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts and Tables Section -->
+            <section class="dashboard-grid">
+                <!-- Analytics Chart -->
+                <div class="chart-container">
+                    <div class="card-header">
+                        <h3>User Growth Analytics</h3>
+                        <div class="chart-controls">
+                            <select class="time-filter">
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 3 months</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-content">
+                        <div class="analytics-chart">
+                            <div class="chart-data">
+                                <div class="data-point" style="height: 45%;" data-value="1,240"></div>
+                                <div class="data-point" style="height: 60%;" data-value="1,680"></div>
+                                <div class="data-point" style="height: 35%;" data-value="980"></div>
+                                <div class="data-point" style="height: 80%;" data-value="2,240"></div>
+                                <div class="data-point" style="height: 70%;" data-value="1,960"></div>
+                                <div class="data-point" style="height: 90%;" data-value="2,520"></div>
+                                <div class="data-point" style="height: 55%;" data-value="1,540"></div>
+                            </div>
+                            <div class="chart-labels">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-container">
+                    <div class="card-header">
+                        <h3>Recent Activity</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon new-user">
+                                <i data-feather="user-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Sara Ali</strong> joined the team</p>
+                                <span class="activity-time">2 minutes ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon project">
+                                <i data-feather="folder-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>New project <strong>"Mobile App Redesign"</strong> created</p>
+                                <span class="activity-time">15 minutes ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon payment">
+                                <i data-feather="credit-card"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>Payment of <strong>$1,240</strong> received</p>
+                                <span class="activity-time">1 hour ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon update">
+                                <i data-feather="settings"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>System update completed successfully</p>
+                                <span class="activity-time">3 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Projects -->
+                <div class="projects-container">
+                    <div class="card-header">
+                        <h3>Top Projects</h3>
+                        <button class="btn-text">
+                            <i data-feather="plus"></i>
+                            Add Project
+                        </button>
+                    </div>
+                    <div class="projects-list">
+                        <div class="project-item">
+                            <div class="project-info">
+                                <div class="project-avatar purple">
+                                    <i data-feather="smartphone"></i>
+                                </div>
+                                <div class="project-details">
+                                    <h4>Mobile Banking App</h4>
+                                    <p>iOS & Android Development</p>
+                                </div>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                                <span class="progress-text">85%</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-info">
+                                <div class="project-avatar blue">
+                                    <i data-feather="globe"></i>
+                                </div>
+                                <div class="project-details">
+                                    <h4>E-commerce Platform</h4>
+                                    <p>Web Development</p>
+                                </div>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 72%;"></div>
+                                </div>
+                                <span class="progress-text">72%</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-info">
+                                <div class="project-avatar green">
+                                    <i data-feather="database"></i>
+                                </div>
+                                <div class="project-details">
+                                    <h4>Data Analytics Dashboard</h4>
+                                    <p>Business Intelligence</p>
+                                </div>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 58%;"></div>
+                                </div>
+                                <span class="progress-text">58%</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-info">
+                                <div class="project-avatar orange">
+                                    <i data-feather="users"></i>
+                                </div>
+                                <div class="project-details">
+                                    <h4>CRM System</h4>
+                                    <p>Customer Management</p>
+                                </div>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 41%;"></div>
+                                </div>
+                                <span class="progress-text">41%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Performance -->
+                <div class="team-container">
+                    <div class="card-header">
+                        <h3>Team Performance</h3>
+                        <button class="btn-text">
+                            <i data-feather="users"></i>
+                            Manage Team
+                        </button>
+                    </div>
+                    <div class="team-list">
+                        <div class="team-member">
+                            <div class="member-info">
+                                <div class="member-avatar">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%23ffffff'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23667eea'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='white' font-family='Inter' font-weight='600' font-size='10'%3ESW%3C/text%3E%3C/svg%3E" alt="Sara Ali">
+                                </div>
+                                <div class="member-details">
+                                    <h4>Sara Wali</h4>
+                                    <p>UI/UX Designer</p>
+                                </div>
+                            </div>
+                            <div class="member-stats">
+                                <div class="performance-score">98%</div>
+                                <div class="status online">Online</div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-info">
+                                <div class="member-avatar">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNa1JGLFIadWHMQ0KvIuKWYGl-cxLwGlI2WA&s" alt="Moiz Ali">
+                                </div>
+                                <div class="member-details">
+                                    <h4>Moiz Ali</h4>
+                                    <p>Frontend Developer</p>
+                                </div>
+                            </div>
+                            <div class="member-stats">
+                                <div class="performance-score">94%</div>
+                                <div class="status online">Online</div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="member-info">
+                                <div class="member-avatar">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNa1JGLFIadWHMQ0KvIuKWYGl-cxLwGlI2WA&s" alt="Amna Ali">
+                                </div>
+                                <div class="member-details">
+                                    <h4>Anna Davis</h4>
+                                    <p>Backend Developer</p>
+                                </div>
+                            </div>
+                            <div class="member-stats">
+                                <div class="performance-score">91%</div>
+                                <div class="status away">Away</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Navigation interactions
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Chart hover effects
+        document.querySelectorAll('.data-point').forEach(point => {
+            point.addEventListener('mouseenter', function() {
+                const value = this.getAttribute('data-value');
+                const tooltip = document.createElement('div');
+                tooltip.className = 'chart-tooltip';
+                tooltip.textContent = value + ' users';
+                this.appendChild(tooltip);
+            });
+            
+            point.addEventListener('mouseleave', function() {
+                const tooltip = this.querySelector('.chart-tooltip');
+                if (tooltip) tooltip.remove();
+            });
+        });
+    </script>
+</body>
+</html>

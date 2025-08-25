@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Banking App - Thomas Smith Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="mobile-banking.css">
+</head>
+<body>
+    <!-- Portfolio Navigation -->
+    <nav class="portfolio-nav">
+        <div class="portfolio-nav-content">
+            <a href="index.html" class="portfolio-brand">← Back to Portfolio</a>
+            <a href="case-study-mobile.html" class="case-study-link">View Case Study</a>
+        </div>
+    </nav>
+
+    <!-- Phone Frame -->
+    <div class="phone-container">
+        <div class="phone-frame">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span class="time">9:41</span>
+                </div>
+                <div class="status-right">
+                    <i data-feather="signal" class="status-icon"></i>
+                    <i data-feather="wifi" class="status-icon"></i>
+                    <div class="battery">
+                        <div class="battery-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Header -->
+            <header class="app-header">
+                <div class="header-content">
+                    <div class="user-greeting">
+                        <h2>Good Morning</h2>
+                        <p>Sara Amin</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="notification-btn">
+                            <i data-feather="bell"></i>
+                            <span class="notification-dot"></span>
+                        </button>
+                        <div class="user-avatar">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNa1JGLFIadWHMQ0KvIuKWYGl-cxLwGlI2WA&s" alt="User Avatar">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="app-content">
+                <!-- Account Balance Card -->
+                <section class="balance-section">
+                    <div class="balance-card">
+                        <div class="card-header">
+                            <h3>Total Balance</h3>
+                            <button class="visibility-toggle">
+                                <i data-feather="eye"></i>
+                            </button>
+                        </div>
+                        <div class="balance-amount">
+                            <span class="currency">$</span>
+                            <span class="amount">12,847.63</span>
+                        </div>
+                        <div class="balance-info">
+                            <div class="account-number">•••• 4629</div>
+                            <div class="card-type">Checking Account</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Actions -->
+                <section class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-btn">
+                            <div class="action-icon send">
+                                <i data-feather="send"></i>
+                            </div>
+                            <span>Send</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="action-icon receive">
+                                <i data-feather="download"></i>
+                            </div>
+                            <span>Receive</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="action-icon pay">
+                                <i data-feather="credit-card"></i>
+                            </div>
+                            <span>Pay Bills</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="action-icon invest">
+                                <i data-feather="trending-up"></i>
+                            </div>
+                            <span>Invest</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Recent Transactions -->
+                <section class="transactions-section">
+                    <div class="section-header">
+                        <h3>Recent Transactions</h3>
+                        <button class="see-all-btn">See All</button>
+                    </div>
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon transfer">
+                                <i data-feather="arrow-up-right"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Transfer to Hamid Ali</h4>
+                                <p>Dec 15, 2024 • 2:30 PM</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                -$250.00
+                            </div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon deposit">
+                                <i data-feather="arrow-down-left"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Salary Deposit</h4>
+                                <p>Dec 14, 2024 • 9:00 AM</p>
+                            </div>
+                            <div class="transaction-amount positive">
+                                +$3,200.00
+                            </div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon purchase">
+                                <i data-feather="shopping-cart"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Amazon Purchase</h4>
+                                <p>Dec 13, 2024 • 4:15 PM</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                -$89.99
+                            </div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon subscription">
+                                <i data-feather="repeat"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Netflix Subscription</h4>
+                                <p>Dec 12, 2024 • 12:00 PM</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                -$15.99
+                            </div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon cashback">
+                                <i data-feather="gift"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Cashback Reward</h4>
+                                <p>Dec 11, 2024 • 6:45 PM</p>
+                            </div>
+                            <div class="transaction-amount positive">
+                                +$12.50
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cards Section -->
+                <section class="cards-section">
+                    <div class="section-header">
+                        <h3>My Cards</h3>
+                        <button class="add-card-btn">
+                            <i data-feather="plus"></i>
+                        </button>
+                    </div>
+                    <div class="cards-slider">
+                        <div class="card-item primary">
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <div class="card-type">Debit Card</div>
+                                    <div class="card-logo">VISA</div>
+                                </div>
+                                <div class="card-number">•••• •••• •••• 4629</div>
+                                <div class="card-footer">
+                                    <div class="card-holder">Sara Amin</div>
+                                    <div class="card-expiry">12/27</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-item secondary">
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <div class="card-type">Credit Card</div>
+                                    <div class="card-logo">MC</div>
+                                </div>
+                                <div class="card-number">•••• •••• •••• 8394</div>
+                                <div class="card-footer">
+                                    <div class="card-holder">Sara Amin</div>
+                                    <div class="card-expiry">09/26</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Insights Section -->
+                <section class="insights-section">
+                    <h3>Financial Insights</h3>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <div class="insight-icon">
+                                <i data-feather="bar-chart-2"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Monthly Spending</h4>
+                                <p>$1,847 this month</p>
+                                <span class="insight-change positive">12% less than last month</span>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-card">
+                            <div class="insight-icon">
+                                <i data-feather="target"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Savings Goal</h4>
+                                <p>$8,500 / $10,000</p>
+                                <span class="insight-change neutral">85% completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Bottom Navigation -->
+            <nav class="bottom-nav">
+                <button class="nav-item active">
+                    <i data-feather="home"></i>
+                    <span>Home</span>
+                </button>
+                <button class="nav-item">
+                    <i data-feather="activity"></i>
+                    <span>Activity</span>
+                </button>
+                <button class="nav-item">
+                    <i data-feather="credit-card"></i>
+                    <span>Cards</span>
+                </button>
+                <button class="nav-item">
+                    <i data-feather="pie-chart"></i>
+                    <span>Insights</span>
+                </button>
+                <button class="nav-item">
+                    <i data-feather="user"></i>
+                    <span>Profile</span>
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+		// for my portfolio.
+		alert("Admin Only allows Demo of Page. Click Okay to continue.");
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Simple interactions
+        document.querySelector('.visibility-toggle').addEventListener('click', function() {
+            const amountElement = document.querySelector('.amount');
+            if (amountElement.textContent === '12,847.63') {
+                amountElement.textContent = '••••••••';
+                this.innerHTML = '<i data-feather="eye-off"></i>';
+            } else {
+                amountElement.textContent = '12,847.63';
+                this.innerHTML = '<i data-feather="eye"></i>';
+            }
+            feather.replace();
+        });
+        
+        // Bottom navigation
+        document.querySelectorAll('.bottom-nav .nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.bottom-nav .nav-item').forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Action buttons
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
