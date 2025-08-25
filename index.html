@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Awais - UI/UX Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html">Awais®</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="Work-Material/work.html" class="nav-link">Work</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i data-feather="sun" class="theme-icon light-icon"></i>
+                <i data-feather="moon" class="theme-icon dark-icon"></i>
+            </button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i data-feather="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- My Hero Section -->
+        <section class="hero" style="
+				position:relative;
+				width:100%; 
+				min-height:400px; 
+				padding:60px 20px;
+				background: url('assets/Me2.png') no-repeat right center;
+				background-size: contain;
+				animation: bgSlideIn 1.4s ease-out forwards;
+				">
+
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-subtitle">UI/UX designer.</span>
+                        <span class="hero-main">Minimal style.</span>
+						
+                    </h1>
+                    <div>
+					<p class="hero-description" style="color: white; text-shadow: 0 0 5px black, 0 0 10px black;">
+                        Figma, HTML, CSS, & visual design.
+                    </p>
+					</div>
+                    <a href="Work-Material/work.html" class="cta-button">View my work</a>
+                </div>
+            </div>
+						<style>
+				@keyframes bgSlideIn {
+				from {
+				background-position: 120% center; /* start off screen to the right */
+				opacity: 0;
+				}
+				to {
+				background-position: right center; /* end in place */
+				opacity: 1;
+				}
+			}
+			</style>
+        </section>
+
+        <!-- My Skills Preview -->
+        <section class="skills-preview">
+            <div class="container">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>UI/UX design</h3>
+                        <p>Clean, intuitive interfaces that focus on clarity and user delight.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Prototyping & wireframing</h3>
+                        <p>Detailed, interactive prototypes and clear wireframes for modern apps.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Responsive web & visual design</h3>
+                        <p>Designs that adapt to any device, with a focus on sleek visuals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="featured-projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Concept Projects</h2>
+                    <p>Showcasing select case studies that explore creative UX and UI approaches for modern platforms.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i data-feather="monitor"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce Dashboard</h3>
+                            <p>Complete redesign of an analytics dashboard with focus on data visualization and user workflow optimization.</p>
+                            <a href="Work-Material/work.html" class="project-link">View case study <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i data-feather="smartphone"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Mobile Banking App</h3>
+                            <p>User-centered design for a fintech startup, focusing on security and ease of use for financial transactions.</p>
+                            <a href="Work-Material/work.html" class="project-link">View case study <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i data-feather="globe"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>SaaS Platform Redesign</h3>
+                            <p>Complete UX overhaul for a B2B platform, improving user onboarding and feature discovery.</p>
+                            <a href="Work-Material/work.html" class="project-link">View case study <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="about-preview">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <div class="about-text">
+                        <p>I'm Muhammad Awais, a UI/UX designer passionate about building usable, beautiful experiences. I work with web and product teams to create digital products that feel intuitive and purposeful.</p>
+                        <p>My strengths include Figma, HTML, CSS, and a love for minimal, functional aesthetics. Creating well-structured user flows and thoughtful visuals is at the core of my process.</p>
+                    </div>
+                    <a href="about.html" class="text-link">Learn more about me <i data-feather="arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" style="background:url('assets/bg1.png') no-repeat center center / cover;
+                width:100%; min-height:400px; padding:60px 20px;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What others say</h2>
+                    <p style="background-color:white;">Feedback from clients & peers.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "Awais elevates every project with thoughtful design and sharp attention to detail."
+                        </blockquote>
+                        <cite>
+                            <strong>Muhammad Qasim</strong>
+                            <span>Mentor</span>
+                        </cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "Your Professional Designs and Color Schemes make the Web Soulful" - Translated
+                        </blockquote>
+                        <cite>
+                            <strong>Sameer Somro</strong>
+                            <span>Project Manager</span>
+                        </cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "UI Designs were but what really Enchanting was the Communication ."
+                        </blockquote>
+                        <cite>
+                            <strong>Sajida Parvez</strong>
+                            <span>Client</span>
+                        </cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="
+			position:relative;
+			width:100%; 
+			min-height:400px; 
+			padding:60px 20px;
+			background: url('assets/CMe.svg') no-repeat right center;
+			background-size: contain; /* or 'auto' if you want exact size */
+		">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Connect with me</h2>
+                    <p>Let's discuss your project or idea.</p>
+                    <a href="contact.html" class="cta-button">Get in touch</a>
+                </div>
+            </div>
+			
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Work-Material/work.html">Work</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="mailto:awaisisworking@gmail.com" aria-label="Email"><i data-feather="mail"></i></a>
+                        <a href="https://www.linkedin.com/in/awais-ali-923626380" target="_blank" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+                        <a href="https://wa.me/923181545648" aria-label="WhatsApp" target="_blank">
+							<i class="fab fa-whatsapp"></i>
+						</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Muhammad Awais. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <script src="script.js"></script>
+		<!-- Unified Popup -->
+<div id="popup-box">
+  <img src="assets/Me.png" alt="Assistant" class="popup-image">
+  <div class="speech-bubble" id="popup-text">👋 Welcome to my Portfolio!</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const popupBox = document.getElementById("popup-box");
+  const popupText = document.getElementById("popup-text");
+
+  // Function to show a dialogue
+  function showDialogue(text) {
+    popupBox.classList.remove("active"); // hide current
+    setTimeout(() => {
+      popupText.textContent = text;
+      popupBox.classList.add("active"); // show new
+    }, 400);
+  }
+
+  // 1. Show welcome after load
+  setTimeout(() => {
+    showDialogue("👋 Welcome to my Portfolio!");
+  }, 1000);
+
+  // 2. Project popup (when projects section enters view)
+  document.querySelectorAll(".featured-projects").forEach(skill => {
+    skill.addEventListener("mouseenter", () => {
+      showDialogue("👀 Check out my favorite project!");
+    });
+  });
+  document.querySelectorAll(".about-preview").forEach(skill => {
+    skill.addEventListener("mouseenter", () => {
+      showDialogue("👉👈 I'll show you my skills untill you hire me!");
+    });
+  });
+  // 3. Skill popup (hover over skill card)
+  document.querySelectorAll(".skill-card").forEach(skill => {
+    skill.addEventListener("mouseenter", () => {
+      showDialogue("💡 I’ve used Figma in 20+ projects!");
+    });
+  });
+
+  // 4. Testimonials section
+  window.addEventListener("scroll", () => {
+    const testimonials = document.querySelector(".testimonials");
+    if (testimonials && testimonials.getBoundingClientRect().top < window.innerHeight * 0.7) {
+      showDialogue("📢 Hear what my Connection say!");
+    }
+  });
+
+  // 5. CTA section (bottom of page)
+  window.addEventListener("scroll", () => {
+    const cta = document.querySelector(".cta-section");
+    if (cta && cta.getBoundingClientRect().top < window.innerHeight * 0.7) {
+      showDialogue("💌 Let’s create something amazing together!");
+    }
+  });
+
+  // 6. Exit intent
+
+});
+</script>
+
+</body>
+</html>
