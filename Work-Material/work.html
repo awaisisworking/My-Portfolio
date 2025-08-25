@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Muhammad Awais | UI/UX Designer</title>
-    <meta name="description" content="Explore Muhammad Awais's UI/UX design projects including mobile apps, web designs, and dashboard interfaces. Case studies with detailed process breakdowns.">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="projects.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Muhammad Awais | UI/UX Designer</title>
+  <meta name="description" content="Explore Muhammad Awais's UI/UX design projects including mobile apps, web designs, and dashboard interfaces. Case studies with detailed process breakdowns.">
 
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="projects.css">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <a href="index.html">Awais®</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="work.html" class="nav-link active">Work</a></li>
-                <li><a href="../skills.html" class="nav-link">Skills</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-                <li><a href="../contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i data-feather="sun" class="theme-icon light-icon"></i>
-                <i data-feather="moon" class="theme-icon dark-icon"></i>
-            </button>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                <i data-feather="menu"></i>
-            </button>
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-brand">
+        <a href="../index.html">Awais®</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="work.html" class="nav-link active">Work</a></li>
+        <li><a href="../skills.html" class="nav-link">Skills</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i data-feather="sun" class="theme-icon light-icon"></i>
+        <i data-feather="moon" class="theme-icon dark-icon"></i>
+      </button>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-feather="menu"></i>
+      </button>
+    </nav>
+  </header>
 
+  <!-- Your page content here -->
+
+  <!-- JS for Feather icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      feather.replace(); // replace <i data-feather="...">
+    });
+  </script>
+
+  <!-- Your site JS (for buttons/menu/theme toggle) -->
+  <script src="../script.js"></script>
 
     <!-- Projects Header -->
     <section class="projects-header">
