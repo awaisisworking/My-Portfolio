@@ -247,23 +247,22 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
     <script src="script.js"></script>
-		<!-- Unified Popup -->
-<div id="popup-box">
+		<!-- Unified Popup --><div id="popup-box">
   <img src="assets/Me.png" alt="Assistant" class="popup-image">
   <div class="speech-bubble" id="popup-text">👋 Welcome to my Portfolio!</div>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const popupBox = document.getElementById("popup-box");
   const popupText = document.getElementById("popup-text");
 
-  // Function to show a dialogue
   function showDialogue(text) {
-    popupBox.classList.remove("active"); // hide current
+    popupBox.classList.remove("active");
     setTimeout(() => {
       popupText.textContent = text;
-      popupBox.classList.add("active"); // show new
-    }, 400);
+      popupBox.classList.add("active");
+    }, 300);
   }
 
   // 1. Show welcome after load
@@ -271,42 +270,51 @@ document.addEventListener("DOMContentLoaded", () => {
     showDialogue("👋 Welcome to my Portfolio!");
   }, 1000);
 
-  // 2. Project popup (when projects section enters view)
-  document.querySelectorAll(".featured-projects").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("👀 Check out my favorite project!");
+  // Detect if mobile
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  // Section dialogues
+  const sections = [
+    { selector: ".featured-projects", text: "👀 Check out my favorite project!" },
+    { selector: ".about-preview", text: "👉👈 I'll show you my skills until you hire me!" },
+    { selector: ".skill-card", text: "💡 I’ve used Figma in 20+ projects!" },
+    { selector: ".testimonials", text: "📢 Hear what my Connections say!" },
+    { selector: ".cta-section", text: "💌 Let’s create something amazing together!" }
+  ];
+
+  if (isMobile) {
+    // 📱 On mobile → trigger when section scrolls into view
+    window.addEventListener("scroll", () => {
+      sections.forEach(({ selector, text }) => {
+        const el = document.querySelector(selector);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.6 && rect.bottom > 0) {
+            showDialogue(text);
+          }
+        }
+      });
     });
-  });
-  document.querySelectorAll(".about-preview").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("👉👈 I'll show you my skills untill you hire me!");
+  } else {
+    // 🖥 On desktop → keep hover for interactive sections
+    sections.forEach(({ selector, text }) => {
+      document.querySelectorAll(selector).forEach(el => {
+        el.addEventListener("mouseenter", () => showDialogue(text));
+      });
     });
-  });
-  // 3. Skill popup (hover over skill card)
-  document.querySelectorAll(".skill-card").forEach(skill => {
-    skill.addEventListener("mouseenter", () => {
-      showDialogue("💡 I’ve used Figma in 20+ projects!");
+
+    // CTA + Testimonials still need scroll triggers on desktop
+    window.addEventListener("scroll", () => {
+      sections.forEach(({ selector, text }) => {
+        const el = document.querySelector(selector);
+        if (el && (selector === ".cta-section" || selector === ".testimonials")) {
+          if (el.getBoundingClientRect().top < window.innerHeight * 0.7) {
+            showDialogue(text);
+          }
+        }
+      });
     });
-  });
-
-  // 4. Testimonials section
-  window.addEventListener("scroll", () => {
-    const testimonials = document.querySelector(".testimonials");
-    if (testimonials && testimonials.getBoundingClientRect().top < window.innerHeight * 0.7) {
-      showDialogue("📢 Hear what my Connection say!");
-    }
-  });
-
-  // 5. CTA section (bottom of page)
-  window.addEventListener("scroll", () => {
-    const cta = document.querySelector(".cta-section");
-    if (cta && cta.getBoundingClientRect().top < window.innerHeight * 0.7) {
-      showDialogue("💌 Let’s create something amazing together!");
-    }
-  });
-
-  // 6. Exit intent
-
+  }
 });
 </script>
 
